@@ -1,6 +1,6 @@
 ﻿namespace CoreCodeCamp.Data
 {
-  public interface IDbContextFactory
-  {
-  }
+    public interface IDbContextFactory
+    {
+    }
 }
