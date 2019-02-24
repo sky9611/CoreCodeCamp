@@ -31,6 +31,7 @@ namespace CoreCodeCamp.Controllers
             try
             {
                 var results = await _repository.GetAllCampsAsync(includeTalks);
+                var a = 0;
                 return _mapper.Map<CampModel[]>(results);
             }
             catch (Exception)
@@ -88,7 +89,7 @@ namespace CoreCodeCamp.Controllers
                 _repository.Add(camp);
                 if(await _repository.SaveChangesAsync())
                 {
-                    return Created($"/api/camps/{camp.Moniker}", _mapper.Map<CampModel>(camp));
+                    return Created(location, _mapper.Map<CampModel>(camp));
                 }
             }
             catch (Exception)
