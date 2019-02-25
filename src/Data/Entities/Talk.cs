@@ -1,17 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CoreCodeCamp.Data
+﻿namespace CoreCodeCamp.Data
 {
     public class Talk
     {
         public int TalkId { get; set; }
-        [Required]
-        [StringLength(100)]
+        public Camp Camp { get; set; }
         public string Title { get; set; }
-        [Required]
-        [StringLength(4000, MinimumLength = 20)]
         public string Abstract { get; set; }
-        [Range(100,300)]
         public int Level { get; set; }
         public Speaker Speaker { get; set; }
     }
